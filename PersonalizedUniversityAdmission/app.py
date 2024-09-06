@@ -11,7 +11,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity, linear_kernel
 
 
-
 #load dataset
 #Load each course with their descriptions 
 def load_course_description_data(data):
