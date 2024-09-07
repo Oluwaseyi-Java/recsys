@@ -1,5 +1,5 @@
 
-# From a young age, I have been deeply fascinated by problem-solving and the logic behind it. This curiosity led me to discover the world of programming, where I found great satisfaction in creating solutions through code. My passion for reading further fuels my desire to constantly learn and expand my knowledge. With a strong interest in computing and engineering, I aspire to study computer science to deepen my understanding of technology and how it can be leveraged to address complex challenges. My goal is to develop innovative solutions that can make a difference in the world.
+# Sample profile - From a young age, I have been deeply fascinated by problem-solving and the logic behind it. This curiosity led me to discover the world of programming, where I found great satisfaction in creating solutions through code. My passion for reading further fuels my desire to constantly learn and expand my knowledge. With a strong interest in computing and engineering, I aspire to study computer science to deepen my understanding of technology and how it can be leveraged to address complex challenges. My goal is to develop innovative solutions that can make a difference in the world.
 
 #Core pkg
 import time
@@ -141,9 +141,6 @@ def main():
     #Streamlit interface
     st.title('Personalized Recommender System')
 
-    df=load_course_description_data("./custom_courses_with_descriptions.json")
-    df2=load_universities_data("./updated_universities.json")
-    
     Jamb_Score=st.number_input("Jamb Score")
     Subjects=st.text_input("Enter your two most proficient academic subjects (separate them with whitespace)")
     Location=st.text_input("University Location (enter the name of it's city or state)")
@@ -151,6 +148,9 @@ def main():
     Hobby=st.text_input("Hobby (what you like to do most academically)")
     Financial_Range=st.selectbox("Financial Range (select 1 if you can only afford 'Below 300 Thousand Naira', select 2 if you can afford 'Below 600 Thousand Naira', select 3 if you can afford 'Above 700 Thousand Naira')", [1,2,3])
     Profile=st.text_area("Profile")
+    
+    df=load_course_description_data("./custom_courses_with_descriptions.json")
+    df2=load_universities_data("./updated_universities.json")
     
  
     Location=Location.capitalize()
@@ -207,9 +207,6 @@ def main():
                 st.write("Not Found")
             
             
-      
-    
-
-    
-
+            
+            
 main()
